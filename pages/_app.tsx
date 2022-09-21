@@ -1,11 +1,16 @@
-import '../styles/globals.css';
-import '../styles/utilities.css';
-import '../styles/sidebar.css';
-import '../styles/header-page.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import "../styles/globals.css";
+import type { AppProps } from "next/app";
+import { ThemeProvider } from "styled-components";
+import { theme } from "../styles/theme";
+import DashboardLayout from "../components/organisms/DashboardLayout/DashboardLayout";
 
-function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />;
+function MyApp({ Component, pageProps }: AppProps) {
+  return (
+    <ThemeProvider theme={theme}>
+      <DashboardLayout>
+        <Component {...pageProps} />
+      </DashboardLayout>
+    </ThemeProvider>
+  );
 }
-
 export default MyApp;

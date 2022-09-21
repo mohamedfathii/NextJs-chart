@@ -1,23 +1,12 @@
-import { Col, Container, Row } from 'react-bootstrap';
-import HeaderPage from '../components/organisms/HeaderPage';
-import SideBar from '../components/organisms/SideBar';
+import type { NextPage } from "next";
+import Container from "../components/organisms/Container";
 
-export default function Home() {
+const Home: NextPage = () => {
   return (
-    <div>
-      <Container fluid>
-        <Row className="p-0">
-          <Col md={2}>
-            <SideBar />
-          </Col>
-          <Col md={10}>
-            <HeaderPage />
-            <div className="pages-content">
-              <h4>Dashboard</h4>
-            </div>
-          </Col>
-        </Row>
-      </Container>
-    </div>
+    <Container title="Dashboard">
+      <div>Dashboard</div>
+    </Container>
   );
-}
+};
+
+export default Home;

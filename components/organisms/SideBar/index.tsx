@@ -1,16 +1,15 @@
-import SideBarItem from './SideBarItem';
+import { MENU_ITEMS } from "../../../constants/menu-items";
+import MenuItemsList from "../MenuItemsList";
+import { SidebarContainer } from "./Sidebar.styles";
 
-export default function SideBar() {
+
+type SidebarProps = {
+  isOpened: boolean;
+};
+export default function Sidebar({ isOpened }: SidebarProps) {
   return (
-    <section className="sidebar">
-      <div className="content">
-        <h4 className="text-center text-white mt-20">Qawafel</h4>
-        <div className="menus mt-30">
-          <SideBarItem title="Home" href="/" />
-          <SideBarItem title="productChart" href="/product-chart" />
-          <SideBarItem title="OrderChart" href="/order-chart" />
-        </div>
-      </div>
-    </section>
+    <SidebarContainer isOpened={isOpened}>
+      <MenuItemsList options={MENU_ITEMS} />
+    </SidebarContainer>
   );
 }

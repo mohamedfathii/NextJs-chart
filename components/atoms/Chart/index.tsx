@@ -40,7 +40,7 @@ export default function Charts(props: ChartsProps) {
 
   return (
     <div>
-      <canvas id="myChart" ref={canvasEl} height="100" />
+      <canvas id="myChart" ref={canvasEl} height="100"/>
     </div>
   );
 }
