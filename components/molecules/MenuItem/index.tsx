@@ -3,8 +3,8 @@ import { useRouter } from "next/router";
 import { MenuItem as MenuItemType } from ".../../../constants/menu-items";
 import { MenuItemContainer } from "./MenuItem.styles";
 import MenuItemsList from "../MenuItemsList";
-import ExpandIcon from "../ExpandIcon";
 import { useState } from "react";
+import ExpandIcon from "../ExpandIcon";
 
 type MenuItemProps = {
   menuItem: MenuItemType;

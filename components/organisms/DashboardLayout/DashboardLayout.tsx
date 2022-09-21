@@ -1,7 +1,7 @@
 import { useState } from 'react'
-import Footer from '../Footer'
-import Header from '../Header'
-import Sidebar from '../Sidebar'
+import Footer from '../../molecules/Footer'
+import Header from '../../molecules/Header'
+import Sidebar from '../../molecules/Sidebar'
 import { Container, Content, PageContainer } from './DashboardLayout.styles'
 
 type DashboardLayoutProps = {
@@ -9,7 +9,7 @@ type DashboardLayoutProps = {
 }
 
 export default function DashboardLayout({ children }: DashboardLayoutProps) {
-	const [isOpened, setOpened] = useState(false)
+	const [isOpened, setOpened] = useState(true)
 	const toggleDrawer = () => {
 		setOpened((prev) => !prev)
 	}

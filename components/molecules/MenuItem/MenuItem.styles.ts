@@ -24,7 +24,7 @@ export const MenuItemContainer = styled.a<{ depth: number }>`
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin-left: ${({ depth }) => `${depth}rem`};
+    margin-left: 100rem ${({ depth }) => `${depth}rem`};
   }
 
   &.selected {
